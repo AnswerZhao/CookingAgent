@@ -3,6 +3,8 @@ import { KnowledgeBase } from '../lib/KnowledgeBase';
 import { IntentExtractor } from '../agents/IntentExtractor';
 import { MenuRecommender } from '../agents/MenuRecommender';
 import { WorkflowPlanner } from '../agents/WorkflowPlanner';
+import * as fs from 'fs';
+import * as path from 'path';
 
 export class ConversationEngine {
   private state: ConversationState = 'AWAITING_PREFERENCES';
@@ -86,12 +88,19 @@ export class ConversationEngine {
     const candidates = await this.knowledgeBase.getRecommendedCandidates(this.userPreferences);
     const menuRecommendations = await this.menuRecommender.recommendMenu(this.userPreferences, candidates);
     
+    console.log('Final menu recommendations received:', menuRecommendations);
+    
     this.setRecommendedMenu(menuRecommendations);
 
     let message = '🎯 根据您的需求，我为您推荐以下菜单：\n\n';
-    menuRecommendations.forEach((item, index) => {
-      message += `${index + 1}. **${item.dishName}**\n   ${item.recommendationReason}\n\n`;
-    });
+    
+    if (menuRecommendations.length === 0) {
+      message += '抱歉，暂时无法为您推荐合适的菜单。请尝试调整您的需求或重新开始。\n\n';
+    } else {
+      menuRecommendations.forEach((item, index) => {
+        message += `${index + 1}. **${item.dishName}**\n   ${item.recommendationReason}\n\n`;
+      });
+    }
     
     message += '您可以:\n';
     message += '• 输入"确认"接受这个菜单\n';
@@ -149,10 +158,38 @@ export class ConversationEngine {
     
     let message = '🛒 **购物清单和用料准备**\n\n';
     message += shoppingList.join('\n');
-    message += '\n\n现在我来为您规划最优的烹饪流程...';
+    message += '\n\n现在我来为您规划最优的烹饪流程...\n\n';
     
-    this.setState('PLANNING_WORKFLOW');
-    return { message, state: 'PLANNING_WORKFLOW' };
+    // Directly generate workflow plan instead of waiting for user input
+    try {
+      const workflowPlan = await this.workflowPlanner.planWorkflow(this.confirmedMenu);
+      
+      message += '⏰ **烹饪流程规划**\n\n';
+      message += workflowPlan;
+      message += '\n\n🎉 一切准备就绪！您现在可以：\n';
+      message += '• 询问任何关于这些菜品的制作问题\n';
+      message += '• 问我某道菜的具体做法\n';
+      message += '• 重新开始规划菜单（输入"重新开始"）\n\n';
+      message += '📄 **完整的烹饪指南已保存到本地文件**，您可以在 `cooking-guides/` 目录中找到详细的 Markdown 文档。';
+      
+      this.setState('READY_FOR_QUESTIONS');
+      
+      // Generate cooking guide markdown file
+      await this.generateCookingGuide(workflowPlan);
+      
+      return { message, state: 'READY_FOR_QUESTIONS' };
+      
+    } catch (error) {
+      console.error('Error generating workflow plan:', error);
+      
+      message += '⚠️ 工作流规划生成失败，但购物清单已准备好。您可以：\n';
+      message += '• 询问任何关于这些菜品的制作问题\n';
+      message += '• 问我某道菜的具体做法\n';
+      message += '• 重新开始规划菜单（输入"重新开始"）';
+      
+      this.setState('READY_FOR_QUESTIONS');
+      return { message, state: 'READY_FOR_QUESTIONS' };
+    }
   }
 
   private async handleWorkflowPlanning(): Promise<{ message: string; state: ConversationState }> {
@@ -271,9 +308,9 @@ export class ConversationEngine {
   generateShoppingList(): string[] {
     const lists: string[] = [];
     
-    this.confirmedMenu.forEach(recipe => {
+    this.confirmedMenu.forEach((recipe, index) => {
       if (recipe.rawContent.ingredientsAndTools) {
-        lists.push(`## ${recipe.dishName}`);
+        lists.push(`## ${index + 1}. ${recipe.dishName}`);
         lists.push(recipe.rawContent.ingredientsAndTools);
         lists.push('');
       }
@@ -352,6 +389,114 @@ export class ConversationEngine {
     };
     
     return prompts[this.state];
+  }
+
+  private async generateCookingGuide(workflowPlan: string): Promise<void> {
+    try {
+      // Use local time for filename timestamp
+      const now = new Date();
+      const timestamp = now.getFullYear().toString() + 
+        (now.getMonth() + 1).toString().padStart(2, '0') + 
+        now.getDate().toString().padStart(2, '0') + '_' +
+        now.getHours().toString().padStart(2, '0') + 
+        now.getMinutes().toString().padStart(2, '0') + 
+        now.getSeconds().toString().padStart(2, '0');
+        
+      const filename = `烹饪指南_${timestamp}.md`;
+      const filepath = path.join(process.cwd(), 'cooking-guides', filename);
+      
+      // Ensure directory exists
+      const dir = path.dirname(filepath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+      
+      // Generate markdown content
+      const content = this.buildCookingGuideContent(workflowPlan, timestamp);
+      
+      // Write to file
+      fs.writeFileSync(filepath, content, 'utf-8');
+      
+      console.log(`📄 烹饪指南已生成: ${filepath}`);
+      
+    } catch (error) {
+      console.error('生成烹饪指南失败:', error);
+    }
+  }
+  
+  private buildCookingGuideContent(workflowPlan: string, timestamp: string): string {
+    const date = new Date();
+    const dateStr = date.toLocaleDateString('zh-CN', {
+      year: 'numeric',
+      month: 'long', 
+      day: 'numeric',
+      weekday: 'long'
+    });
+    
+    const timeStr = date.toLocaleTimeString('zh-CN', {
+      hour12: false,
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+    
+    let content = `# 🍳 智能烹饪指南\n\n`;
+    content += `**生成时间**: ${dateStr} ${timeStr}\n`;
+    content += `**用餐人数**: ${this.userPreferences.peopleCount || 2}人\n`;
+    content += `**口味偏好**: ${this.userPreferences.tastePreferences?.join('、') || '无特殊要求'}\n`;
+    if (this.userPreferences.specialGroup?.length) {
+      content += `**特殊人群**: ${this.userPreferences.specialGroup.join('、')}\n`;
+    }
+    content += `\n---\n\n`;
+    
+    // Menu section
+    content += `## 🎯 推荐菜单\n\n`;
+    this.recommendedMenu.forEach((item, index) => {
+      content += `### ${index + 1}. ${item.dishName}\n\n`;
+      content += `**推荐理由**: ${item.recommendationReason}\n\n`;
+    });
+    
+    // Shopping list section
+    content += `\n## 🛍️ 购物清单和用料准备\n\n`;
+    const shoppingList = this.generateShoppingList();
+    shoppingList.forEach(line => {
+      if (line.trim()) {
+        content += `${line}\n`;
+      } else {
+        content += `\n`;
+      }
+    });
+    
+    // Workflow section
+    content += `\n## ⏰ 烹饪流程规划\n\n`;
+    content += workflowPlan;
+    
+    // Detailed recipes section
+    content += `\n\n## 📝 详细制作步骤\n\n`;
+    this.confirmedMenu.forEach((recipe, index) => {
+      content += `### ${index + 1}. ${recipe.dishName}\n\n`;
+      
+      if (recipe.rawContent.ingredientsAndTools) {
+        content += `**必备原料和工具**:\n${recipe.rawContent.ingredientsAndTools}\n\n`;
+      }
+      
+      if (recipe.rawContent.calculation) {
+        content += `**用量计算**:\n${recipe.rawContent.calculation}\n\n`;
+      }
+      
+      if (recipe.rawContent.steps) {
+        content += `**制作步骤**:\n${recipe.rawContent.steps}\n\n`;
+      }
+      
+      content += `---\n\n`;
+    });
+    
+    // Footer
+    content += `\n## 📝 备注\n\n`;
+    content += `- 本指南由 CookingAgent 智能烹饪助手生成\n`;
+    content += `- 生成时间: ${date.toLocaleString('zh-CN')}\n`;
+    content += `- 如有问题，请随时咨询 CookingAgent\n`;
+    
+    return content;
   }
 
   reset(): void {

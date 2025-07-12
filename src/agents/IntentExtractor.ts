@@ -40,7 +40,12 @@ export class IntentExtractor {
       });
 
       console.log('Extracted preferences:', result.object);
-      return result.object;
+      
+      // Post-process taste preferences to match database tags
+      const processedPreferences = this.mapTastePreferences(result.object);
+      console.log('Processed preferences after taste mapping:', processedPreferences);
+      
+      return processedPreferences;
 
     } catch (error) {
       console.error('Error extracting intent:', error);
@@ -53,6 +58,47 @@ export class IntentExtractor {
         maxCookingTimeMinutes: undefined
       };
     }
+  }
+
+  private mapTastePreferences(preferences: any): any {
+    if (!preferences.tastePreferences) {
+      return preferences;
+    }
+
+    // Map user terms to actual database taste tags
+    const tasteMapping: { [key: string]: string[] } = {
+      '清淡': ['鲜'], // Map 清淡 to 鲜 (fresh/light taste)
+      '清爽': ['鲜'],
+      '不油腻': ['鲜'],
+      '淡': ['鲜'],
+      '鲜美': ['鲜'],
+      '香': ['香'],
+      '香味': ['香'],
+      '辣': ['辣'],
+      '微辣': ['微辣'],
+      '甜': ['甜'],
+      '酸': ['酸'],
+      '咸': ['咸'],
+      '麻': ['麻'],
+      '苦': ['苦']
+    };
+
+    const mappedTastes = new Set<string>();
+    
+    preferences.tastePreferences.forEach((taste: string) => {
+      const mapped = tasteMapping[taste];
+      if (mapped) {
+        mapped.forEach(tag => mappedTastes.add(tag));
+      } else {
+        // If no mapping found, keep original (might still match)
+        mappedTastes.add(taste);
+      }
+    });
+
+    return {
+      ...preferences,
+      tastePreferences: Array.from(mappedTastes)
+    };
   }
 
   private getSystemPrompt(): string {

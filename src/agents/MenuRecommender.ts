@@ -40,12 +40,35 @@ export class MenuRecommender {
   ): Promise<MenuRecommendation[]> {
     try {
       console.log('Generating menu recommendations based on preferences:', preferences);
+      console.log('Available candidate dishes:', {
+        mainDishes: candidateDishes.mainDishes.length,
+        vegetableDishes: candidateDishes.vegetableDishes.length,
+        soups: candidateDishes.soups.length
+      });
+      
+      // Debug: Show first few dishes from each category
+      if (candidateDishes.mainDishes.length > 0) {
+        console.log('Sample main dishes:', candidateDishes.mainDishes.slice(0, 3).map(d => d.dishName));
+      }
+      if (candidateDishes.vegetableDishes.length > 0) {
+        console.log('Sample vegetable dishes:', candidateDishes.vegetableDishes.slice(0, 3).map(d => d.dishName));
+      }
 
       const modelConfig = this.configManager.getModelConfig('menu_recommendation');
       this.configManager.logModelUsage('Menu Recommendation', modelConfig.model);
 
       // Calculate menu composition based on people count
       const menuComposition = this.calculateMenuComposition(preferences.peopleCount || 2);
+      console.log('Menu composition required:', menuComposition);
+
+      // Create a set of all available dish names for validation
+      const allAvailableDishes = [
+        ...candidateDishes.mainDishes,
+        ...candidateDishes.vegetableDishes,
+        ...candidateDishes.soups
+      ];
+      const availableDishNames = new Set(allAvailableDishes.map(dish => dish.dishName));
+      console.log('Total available dishes for validation:', availableDishNames.size);
 
       const openaiProvider = createOpenAIProvider(modelConfig);
       const model = getModelFromProvider(openaiProvider, modelConfig.model);
@@ -60,12 +83,36 @@ export class MenuRecommender {
       });
 
       console.log('Generated menu recommendations:', result.object);
-      return result.object.menu as MenuRecommendation[];
+      
+      // Validate that all recommended dishes exist in our database
+      const recommendedMenu = result.object.menu as MenuRecommendation[];
+      const validatedMenu = recommendedMenu.filter(item => {
+        const isValid = availableDishNames.has(item.dishName);
+        if (!isValid) {
+          console.warn(`Invalid dish name recommended by LLM: "${item.dishName}". Filtering out.`);
+        }
+        return isValid;
+      });
+
+      console.log('Validated menu items:', validatedMenu.length);
+      
+      // If we lost too many dishes due to validation, use fallback
+      if (validatedMenu.length < menuComposition.totalDishes - 1) {
+        console.warn(`Too many invalid dishes recommended (${validatedMenu.length}/${menuComposition.totalDishes}). Using fallback menu.`);
+        const fallbackMenu = this.generateFallbackMenu(candidateDishes, preferences.peopleCount || 2);
+        console.log('Generated fallback menu:', fallbackMenu);
+        return fallbackMenu;
+      }
+
+      return validatedMenu;
 
     } catch (error) {
       console.error('Error generating menu recommendations:', error);
       // Return fallback recommendations
-      return this.generateFallbackMenu(candidateDishes, preferences.peopleCount || 2);
+      console.log('Using fallback menu due to error...');
+      const fallbackMenu = this.generateFallbackMenu(candidateDishes, preferences.peopleCount || 2);
+      console.log('Generated fallback menu:', fallbackMenu);
+      return fallbackMenu;
     }
   }
 
@@ -148,6 +195,9 @@ ${candidateDishes.soups.slice(0, 8).map((dish, i) =>
 ## 食材相克提醒
 请注意避免以下食材组合：
 ${this.foodCompatibilityRules.join('\n')}
+
+## ⚠️ 重要约束
+**请严格从上述可选菜品列表中选择菜品。每个推荐的dishName必须与列表中的菜名完全一致，不要修改菜名。**
 
 请从以上选项中精心挑选菜品，组成一份符合要求的完整菜单，并为每道菜提供推荐理由。`;
 

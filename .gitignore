@@ -118,3 +118,6 @@ error.log
 
 # Local development
 .local/
+
+# Generated cooking guides (user-specific)
+cooking-guides/

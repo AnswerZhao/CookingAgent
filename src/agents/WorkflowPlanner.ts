@@ -79,8 +79,15 @@ export class WorkflowPlanner {
     });
 
     let workflowText = '';
-    for await (const chunk of result.textStream) {
-      workflowText += chunk;
+    try {
+      for await (const chunk of result.textStream) {
+        workflowText += chunk;
+        // Optional: Add real-time progress logging
+        process.stdout.write('.');
+      }
+    } catch (error) {
+      console.error('Error processing text stream:', error);
+      throw error;
     }
 
     return workflowText;
@@ -101,8 +108,15 @@ export class WorkflowPlanner {
     });
 
     let workflowText = '';
-    for await (const chunk of result.textStream) {
-      workflowText += chunk;
+    try {
+      for await (const chunk of result.textStream) {
+        workflowText += chunk;
+        // Optional: Add real-time progress logging
+        process.stdout.write('.');
+      }
+    } catch (error) {
+      console.error('Error processing text stream:', error);
+      throw error;
     }
 
     return workflowText;

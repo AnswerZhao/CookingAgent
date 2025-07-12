@@ -65,26 +65,43 @@ export class KnowledgeBase {
     await this.ensureLoaded();
     
     let candidates = this.recipesIndex;
+    console.log(`Starting with ${candidates.length} total recipes`);
+    console.log('Preferences for search:', preferences);
 
-    // Filter by taste preferences
+    // Filter by taste preferences (if no matches found, include all)
     if (preferences.tastePreferences?.length) {
-      candidates = candidates.filter(recipe => 
+      const filteredByTaste = candidates.filter(recipe => 
         preferences.tastePreferences!.some(taste => 
           recipe.tags.taste.includes(taste)
         )
       );
+      
+      // Only apply taste filter if we found some matches
+      if (filteredByTaste.length > 0) {
+        candidates = filteredByTaste;
+        console.log(`Filtered by taste preferences: ${candidates.length} recipes remaining`);
+      } else {
+        console.log(`No recipes match taste preferences ${preferences.tastePreferences}, keeping all candidates`);
+      }
     }
 
-    // Filter by special group requirements
+    // Sort by special group preferences (prefer rather than filter)
     if (preferences.specialGroup?.length) {
-      candidates = candidates.filter(recipe => {
+      candidates = candidates.sort((a, b) => {
+        let scoreA = 0;
+        let scoreB = 0;
+        
         if (preferences.specialGroup!.includes('kid')) {
-          return recipe.tags.suitability.includes('kid_friendly');
+          if (a.tags.suitability.includes('kid_friendly')) scoreA += 2;
+          if (b.tags.suitability.includes('kid_friendly')) scoreB += 2;
         }
+        
         if (preferences.specialGroup!.includes('pregnant')) {
-          return recipe.tags.suitability.includes('pregnancy_safe');
+          if (a.tags.suitability.includes('pregnancy_safe')) scoreA += 2;
+          if (b.tags.suitability.includes('pregnancy_safe')) scoreB += 2;
         }
-        return true;
+        
+        return scoreB - scoreA; // Higher score first
       });
     }
 
@@ -101,7 +118,9 @@ export class KnowledgeBase {
     }
 
     // Convert to full recipe objects
-    return candidates.map(recipe => this.recipesData[recipe.dishName]);
+    const result = candidates.map(recipe => this.recipesData[recipe.dishName]);
+    console.log(`Final search result: ${result.length} recipes`);
+    return result;
   }
 
   async getRecommendedCandidates(preferences: UserPreferences): Promise<{
