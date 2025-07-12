@@ -1,0 +1,7640 @@
+[
+  {
+    "dishName": "咖喱炒蟹",
+    "category": "aquatic",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "小龙虾",
+    "category": "aquatic",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "辣",
+        "麻",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "烧"
+      ],
+      "season": [
+        "夏"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "干煎阿根廷红虾",
+    "category": "aquatic",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "煎"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "微波葱姜黑鳕鱼",
+    "category": "aquatic",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "水煮鱼",
+    "category": "aquatic",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "麻",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "汆",
+        "煮"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "油焖大虾",
+    "category": "aquatic",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "混合烤鱼",
+    "category": "aquatic",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "麻",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "清蒸生蚝",
+    "category": "aquatic",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "鲜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "清蒸鲈鱼",
+    "category": "aquatic",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "白灼虾",
+    "category": "aquatic",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "糖醋鲤鱼",
+    "category": "aquatic",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "红烧鱼",
+    "category": "aquatic",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "红烧鱼头",
+    "category": "aquatic",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "红烧鲤鱼",
+    "category": "aquatic",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒",
+        "焖",
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "芥末黄油罗氏虾",
+    "category": "aquatic",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "葱油桂鱼",
+    "category": "aquatic",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "葱烧海参",
+    "category": "aquatic",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "炒",
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蒜蓉虾",
+    "category": "aquatic",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "鲜",
+        "香",
+        "咸"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蒜香黄油虾",
+    "category": "aquatic",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "香",
+        "鲜",
+        "咸"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蛏抱蛋",
+    "category": "aquatic",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "鲜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "香煎翘嘴鱼",
+    "category": "aquatic",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "煎",
+        "煮",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "鲤鱼炖白菜",
+    "category": "aquatic",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "鳊鱼炖豆腐",
+    "category": "aquatic",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "炖",
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "黄油煎虾",
+    "category": "aquatic",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "吐司果酱",
+    "category": "breakfast",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "太阳蛋",
+    "category": "breakfast",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "完美水煮蛋",
+    "category": "breakfast",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "鲜"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "微波炉荷包蛋",
+    "category": "breakfast",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "微波炉蛋糕",
+    "category": "breakfast",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "手抓饼",
+    "category": "breakfast",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "桂圆红枣粥",
+    "category": "breakfast",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "水煮玉米",
+    "category": "breakfast",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "煮"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "温泉蛋",
+    "category": "breakfast",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "鲜"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "溏心蛋",
+    "category": "breakfast",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "鲜"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "煎饺",
+    "category": "breakfast",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "燕麦鸡蛋饼",
+    "category": "breakfast",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "香",
+        "鲜"
+      ],
+      "cookingStyle": [
+        "煎"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "牛奶燕麦",
+    "category": "breakfast",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "空气炸锅面包片",
+    "category": "breakfast",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "美式炒蛋",
+    "category": "breakfast",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "苏格兰蛋",
+    "category": "breakfast",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "茶叶蛋",
+    "category": "breakfast",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "煮"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蒸水蛋",
+    "category": "breakfast",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蒸花卷",
+    "category": "breakfast",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蛋煎糍粑",
+    "category": "breakfast",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "煎"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "金枪鱼酱三明治",
+    "category": "breakfast",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "鸡蛋三明治",
+    "category": "breakfast",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "煮",
+        "煎"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "油泼辣子",
+    "category": "condiment",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "甜",
+        "麻",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "油酥",
+    "category": "condiment",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "炸串酱料",
+    "category": "condiment",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "麻",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "简易版炒糖色",
+    "category": "condiment",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "苦"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "糖醋汁",
+    "category": "condiment",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "草莓酱",
+    "category": "condiment",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "酸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "葱油",
+    "category": "condiment",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "香",
+        "鲜"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蒜香酱油",
+    "category": "condiment",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蔗糖糖浆",
+    "category": "condiment",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "反沙芋头",
+    "category": "dessert",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "咖啡椰奶冻",
+    "category": "dessert",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "苦",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "奥利奥冰淇淋",
+    "category": "dessert",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "戚风蛋糕",
+    "category": "dessert",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "提拉米苏",
+    "category": "dessert",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "无厨师机蜂蜜面包",
+    "category": "dessert",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "炸鲜奶",
+    "category": "dessert",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "烤箱版巴斯克芝士蛋糕",
+    "category": "dessert",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "烤蛋挞",
+    "category": "dessert",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "玛格丽特饼干",
+    "category": "dessert",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "红柚蛋糕",
+    "category": "dessert",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "酸",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "芋泥雪媚娘",
+    "category": "dessert",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "英式司康",
+    "category": "dessert",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "草莓冰淇淋",
+    "category": "dessert",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "酸",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "酸奶意式奶冻",
+    "category": "dessert",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "酸"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "雪花酥",
+    "category": "dessert",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "魔芋蛋糕",
+    "category": "dessert",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "龟苓膏",
+    "category": "dessert",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "苦",
+        "甜"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "B52轰炸机",
+    "category": "drink",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "苦",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "Mojito莫吉托",
+    "category": "drink",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "冬瓜茶",
+    "category": "drink",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "夏"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "冰粉",
+    "category": "drink",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "可乐桶",
+    "category": "drink",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "酸",
+        "苦",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "奇异果菠菜特调",
+    "category": "drink",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "酸"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "奶茶",
+    "category": "drink",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "杨枝甘露",
+    "category": "drink",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "酸",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "柠檬水",
+    "category": "drink",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "泰国手标红茶",
+    "category": "drink",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "海边落日",
+    "category": "drink",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "酸"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "百香果橙子特调",
+    "category": "drink",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "砂糖椰子冰沙",
+    "category": "drink",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "耙耙柑茶",
+    "category": "drink",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "酸",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "菠萝咖啡特调",
+    "category": "drink",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "苦",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "酒酿醪糟",
+    "category": "drink",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "酸梅汤",
+    "category": "drink",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "夏"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "酸梅汤（半成品加工）",
+    "category": "drink",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "金汤力",
+    "category": "drink",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "酸",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "金菲士",
+    "category": "drink",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "长岛冰茶",
+    "category": "drink",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "夏"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "乡村啤酒鸭",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "农家一碗香",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "冬瓜酿肉",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "冷吃兔",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "麻",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "凉拌鸡丝",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "麻",
+        "香"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "卤菜",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "辣",
+        "甜"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "口水鸡",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "辣",
+        "麻",
+        "咸",
+        "鲜",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "夏"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "可乐鸡翅",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "台式卤肉饭",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "咕噜肉",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "咖喱肥牛",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "商芝肉",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "炸",
+        "蒸",
+        "炒"
+      ],
+      "season": [
+        "春"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "啤酒鸭",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "回锅肉",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "土豆炖排骨",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖",
+        "焖",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "奶酪培根通心粉",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "香",
+        "鲜"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "姜炒鸡",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "姜葱捞鸡",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "孜然牛肉",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "宫保鸡丁",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "辣",
+        "咸",
+        "鲜",
+        "麻",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "小炒肉",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "小炒鸡肝",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "小炒黄牛肉",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "小米辣炒肉",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "小酥肉",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "麻",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "尖叫牛蛙",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "麻",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒",
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "尖椒炒牛肉",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "山西过油肉",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "酸",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "巴基斯坦牛肉咖喱",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "辣",
+        "香",
+        "鲜"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "带把肘子",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "干煸仔鸡",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "麻",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "广式萝卜牛腩",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "炖",
+        "焖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "徽派红烧肉",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒",
+        "烧",
+        "焖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "意式烤鸡",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "香",
+        "酸"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "新疆大盘鸡",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "甜",
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "无骨鸡爪",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "辣",
+        "咸",
+        "鲜",
+        "麻",
+        "香"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "杀猪菜",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "酸",
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炖",
+        "焖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "枝竹羊腩煲",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "炖",
+        "炒"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "柱候牛腩",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "梅菜扣肉",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒",
+        "蒸"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "椒盐排条",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "水煮牛肉",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "煮"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "水煮肉片",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "麻",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "洋葱炒猪肉",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "清蒸鳜鱼",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "湖南家常红烧肉",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "辣",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "湘祁米夫鸭",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "烤鸡翅",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "牛排",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "煎"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "猪皮冻",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "猪肉烩酸菜",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "酸",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "焖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "甜辣烤全翅",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "番茄红酱",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "瘦肉土豆片",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "白菜猪肉炖粉条",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖",
+        "炒"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "粉蒸肉",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "糖醋排骨",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒",
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "糖醋里脊",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "红烧猪蹄",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "红烧肉",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炖",
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "羊排焖面",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "辣",
+        "咸",
+        "麻",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炖",
+        "焖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "老妈蹄花",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "老式锅包肉",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "肉饼炖蛋",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "芥末罗氏虾",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "茭白炒肉",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "荔枝肉",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "酸",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "荷兰豆炒腊肠",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "萝卜炖羊排",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蒜苔炒肉末",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "虎皮肘子",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "烧",
+        "焖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "蚂蚁上树",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "血浆鸭",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "焖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "西红柿土豆炖牛肉",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "西红柿牛腩",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "豆豉鲮鱼油麦菜",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "豉汁蒸白鱔",
+    "category": "meat_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "贵州辣子鸡",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "麻",
+        "香",
+        "咸",
+        "鲜"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒",
+        "焖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "辣椒炒肉",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "酱排骨",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "炒",
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "酱牛肉",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "香",
+        "鲜",
+        "甜"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "醉排骨",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香",
+        "酸"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "青椒土豆炒肉",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "香干肉丝",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "香干芹菜炒肉",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香",
+        "麻"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "香煎五花肉",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "煎"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "香菇滑鸡",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "炒",
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "香辣鸡爪煲",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "鱼香肉丝",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "鱼香茄子",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "麻婆豆腐",
+    "category": "meat_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "麻",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "麻辣香锅",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "辣",
+        "麻",
+        "香",
+        "咸"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "黄焖鸡",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "微辣"
+      ],
+      "cookingStyle": [
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "黄瓜炒肉",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "辣",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "黑椒牛柳",
+    "category": "meat_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "黔式腊肠娃娃菜",
+    "category": "meat_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "凉皮",
+    "category": "semi-finished",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "半成品意面",
+    "category": "semi-finished",
+    "difficulty": 1,
+    "tags": {
+      "taste": [],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "懒人蛋挞",
+    "category": "semi-finished",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "炸薯条",
+    "category": "semi-finished",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "香"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "牛油火锅底料",
+    "category": "semi-finished",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "麻",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炸"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "空气炸锅羊排",
+    "category": "semi-finished",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "香",
+        "咸",
+        "鲜"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "空气炸锅鸡翅中",
+    "category": "semi-finished",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "香",
+        "咸",
+        "鲜"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "速冻水饺",
+    "category": "semi-finished",
+    "difficulty": 2,
+    "tags": {
+      "taste": [],
+      "cookingStyle": [
+        "煮"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "速冻汤圆",
+    "category": "semi-finished",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "速冻馄饨",
+    "category": "semi-finished",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "勾芡香菇汤",
+    "category": "soup",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "奶油蘑菇汤",
+    "category": "soup",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "小米粥",
+    "category": "soup",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "排骨苦瓜汤",
+    "category": "soup",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "苦",
+        "咸",
+        "鲜"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "夏"
+      ],
+      "suitability": [
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "昂刺鱼豆腐汤",
+    "category": "soup",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "朱雀汤",
+    "category": "soup",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "玉米排骨汤",
+    "category": "soup",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "鲜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "生汆丸子汤",
+    "category": "soup",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "番茄牛肉蛋花汤",
+    "category": "soup",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "皮蛋瘦肉粥",
+    "category": "soup",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "米粥",
+    "category": "soup",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "紫菜蛋花汤",
+    "category": "soup",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "罗宋汤",
+    "category": "soup",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "羊肉汤",
+    "category": "soup",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "腊八粥",
+    "category": "soup",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "菌菇炖乳鸽",
+    "category": "soup",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "鲜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "西红柿鸡蛋汤",
+    "category": "soup",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "金针菇汤",
+    "category": "soup",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "银耳莲子粥",
+    "category": "soup",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "陈皮排骨汤",
+    "category": "soup",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "陈皮排骨汤",
+    "category": "soup",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "中式馅饼",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "凉粉",
+    "category": "staple",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "夏"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "基础牛奶面包",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "微波炉腊肠煲仔饭",
+    "category": "staple",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "意式肉酱面",
+    "category": "staple",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "手工水饺",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "扬州炒饭",
+    "category": "staple",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "披萨饼皮",
+    "category": "staple",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "日式咖喱饭",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "炖",
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "日式肥牛丼饭",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "汤面",
+    "category": "staple",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "河南蒸面条",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "火腿饭团",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "炒凉粉",
+    "category": "staple",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "炒年糕",
+    "category": "staple",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "炒意大利面",
+    "category": "staple",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "酸",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "炒方便面",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "炒河粉",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "炒馍",
+    "category": "staple",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "炸酱面",
+    "category": "staple",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "烙饼",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "香"
+      ],
+      "cookingStyle": [],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "烧饼",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "烙"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "热干面",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "煮泡面加蛋",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "煮"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "电饭煲三文鱼炊饭",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "空气炸锅照烧鸡饭",
+    "category": "staple",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "米饭",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "香"
+      ],
+      "cookingStyle": [
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "老友猪肉粉",
+    "category": "staple",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "酸",
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "老干妈拌面",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "肉蛋盖饭",
+    "category": "staple",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "甜",
+        "酸"
+      ],
+      "cookingStyle": [
+        "煎",
+        "煮"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "茄子肉煎饼",
+    "category": "staple",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "煎"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "葱油拌面",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蒸卤面",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蛋包饭",
+    "category": "staple",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蛋炒饭",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "螺蛳粉",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "煮"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "西红柿鸡蛋挂面",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "豆角焖面",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "酱拌荞麦面",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "酸辣蕨根粉",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "醪糟小汤圆",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "煮"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "陕西油泼面",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "香",
+        "酸"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "韩式拌饭",
+    "category": "staple",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "辣",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "煮",
+        "煎"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "韭菜盒子",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "鲣鱼海苔玉米饭",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "鲜",
+        "香",
+        "咸"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "麻油拌面",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "麻辣减脂荞麦面",
+    "category": "staple",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "辣",
+        "麻",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "煮"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "示例菜",
+    "category": "template",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "上汤娃娃菜",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "煮",
+        "煎",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "凉拌木耳",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "辣",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "凉拌油麦菜",
+    "category": "vegetable_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "凉拌莴笋",
+    "category": "vegetable_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "凉拌豆腐",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "甜",
+        "酸",
+        "辣"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "凉拌金针菇",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "凉拌黄瓜",
+    "category": "vegetable_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "包菜炒鸡蛋粉丝",
+    "category": "vegetable_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "地三鲜",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "小炒藕丁",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "干锅花菜",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "炒",
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "手撕包菜",
+    "category": "vegetable_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "拔丝土豆",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "松仁玉米",
+    "category": "vegetable_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "椒盐玉米",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly"
+      ]
+    }
+  },
+  {
+    "dishName": "榄菜肉末四季豆",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "水油焖蔬菜",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜"
+      ],
+      "cookingStyle": [
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "油醋爆蛋",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "洋葱炒鸡蛋",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "清炒花菜",
+    "category": "vegetable_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "清蒸南瓜",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "炒滑蛋",
+    "category": "vegetable_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "炒茄子",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "炒青菜",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "烤茄子",
+    "category": "vegetable_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "烤"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "白灼菜心",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "糖拌西红柿",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "夏"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "素炒豆角",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "红烧冬瓜",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒",
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "红烧茄子",
+    "category": "vegetable_dish",
+    "difficulty": 4,
+    "tags": {
+      "taste": [
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "炒",
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "脆皮豆腐",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸",
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "芹菜拌茶树菇",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "茄子炖土豆",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炖",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "莴笋叶煎饼",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "菠菜炒鸡蛋",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "葱煎豆腐",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "微辣"
+      ],
+      "cookingStyle": [
+        "煎",
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蒜蓉空心菜",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蒜蓉西兰花",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "蒲烧茄子",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸",
+        "煎",
+        "烧"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "虎皮青椒",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "甜",
+        "酸",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "蚝油三鲜菇",
+    "category": "vegetable_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "蚝油生菜",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "甜"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "西红柿炒鸡蛋",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "西红柿豆腐汤羹",
+    "category": "vegetable_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "西葫芦炒鸡蛋",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "话梅煮毛豆",
+    "category": "vegetable_dish",
+    "difficulty": 1,
+    "tags": {
+      "taste": [
+        "酸",
+        "甜",
+        "咸"
+      ],
+      "cookingStyle": [
+        "煮"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "酸辣土豆丝",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "酸",
+        "辣",
+        "咸",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "金针菇日本豆腐煲",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒",
+        "焖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "陕北熬豆角",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香",
+        "辣"
+      ],
+      "cookingStyle": [
+        "炒",
+        "炖"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "雷椒皮蛋",
+    "category": "vegetable_dish",
+    "difficulty": 3,
+    "tags": {
+      "taste": [
+        "辣",
+        "咸",
+        "鲜",
+        "香",
+        "酸",
+        "甜"
+      ],
+      "cookingStyle": [
+        "凉拌"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": []
+    }
+  },
+  {
+    "dishName": "鸡蛋火腿炒黄瓜",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "炒"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  },
+  {
+    "dishName": "鸡蛋羹",
+    "category": "vegetable_dish",
+    "difficulty": 2,
+    "tags": {
+      "taste": [
+        "咸",
+        "鲜",
+        "香"
+      ],
+      "cookingStyle": [
+        "蒸"
+      ],
+      "season": [
+        "春",
+        "夏",
+        "秋",
+        "冬"
+      ],
+      "suitability": [
+        "kid_friendly",
+        "pregnancy_safe"
+      ]
+    }
+  }
+]

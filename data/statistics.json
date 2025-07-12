@@ -1,0 +1,60 @@
+{
+  "totalRecipes": 321,
+  "categories": {
+    "aquatic": 24,
+    "breakfast": 22,
+    "condiment": 9,
+    "dessert": 18,
+    "drink": 21,
+    "meat_dish": 96,
+    "semi-finished": 10,
+    "soup": 21,
+    "staple": 47,
+    "template": 1,
+    "vegetable_dish": 52
+  },
+  "difficulty": {
+    "1": 112,
+    "2": 107,
+    "3": 73,
+    "4": 29
+  },
+  "tags": {
+    "taste": {
+      "咸": 250,
+      "鲜": 200,
+      "香": 295,
+      "辣": 86,
+      "麻": 21,
+      "甜": 137,
+      "酸": 61,
+      "苦": 7,
+      "微辣": 2
+    },
+    "cookingStyle": {
+      "炒": 135,
+      "焖": 29,
+      "烧": 19,
+      "煎": 13,
+      "蒸": 28,
+      "汆": 1,
+      "煮": 15,
+      "炸": 41,
+      "烤": 21,
+      "炖": 53,
+      "凉拌": 23,
+      "烙": 1
+    },
+    "season": {
+      "春": 270,
+      "夏": 295,
+      "秋": 269,
+      "冬": 292
+    },
+    "suitability": {
+      "kid_friendly": 222,
+      "pregnancy_safe": 182
+    }
+  },
+  "generatedAt": "2025-07-12T07:46:01.659Z"
+}
