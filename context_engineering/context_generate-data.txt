@@ -1,0 +1,2969 @@
+npm run build-data
+
+> cookbookagent@1.0.0 build-data
+> ts-node scripts/process-data.ts
+
+[dotenv@17.2.0] injecting env (17) from .env (tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit)
+[dotenv@17.2.0] injecting env (0) from .env (tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit)
+=== CookingAgent Data Processing Pipeline ===
+Starting data processing...
+
+📖 Step 1: Parsing recipes from HowToCook...
+Processing category: aquatic
+Processing category: breakfast
+Processing category: condiment
+Processing category: dessert
+Processing category: drink
+Processing category: meat_dish
+Processing category: semi-finished
+Processing category: soup
+Processing category: staple
+Processing category: template
+Processing category: vegetable_dish
+Parsed 321 recipes
+
+🏷️  Step 2: Tagging recipes with LLM...
+Configuration loaded:
+- API Base URL: https://ark.cn-beijing.volces.com/api/v3
+- Default Model: doubao-seed-1-6-250615
+- Default Temperature: 0.3
+- Max Tokens: 2048
+- Batch Size: 10
+No existing data found, starting fresh...
+Found 0 existing processed recipes
+Tagging recipe: 咖喱炒蟹
+[2025-07-12T05:47:10.947Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 小龙虾
+[2025-07-12T05:47:13.221Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 干煎阿根廷红虾
+[2025-07-12T05:47:14.968Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 干煎阿根廷红虾: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["咸","鲜","香"],"cookingStyle":["煎"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "煎",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煎",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["咸","鲜","香"], "cookingStyle":["煎"], "season":["春","夏","秋","冬"], "suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '021752299235025f98b00bcc2aeaa56419bd0b663a5fc4e594900',
+    timestamp: 2025-07-12T05:47:17.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1222, completionTokens: 50, totalTokens: 1272 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 干煎阿根廷红虾
+Tagging recipe: 微波葱姜黑鳕鱼
+[2025-07-12T05:47:17.965Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 水煮鱼
+[2025-07-12T05:47:20.490Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 水煮鱼: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["辣","咸","麻","香"],"cookingStyle":["炒","汆"],"season":["春","夏","秋","冬"],"suitability":[]}.
+  Error message: [
+    {
+      "received": "汆",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        1
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '汆'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "汆",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          1
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '汆'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: []
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["辣","咸","麻","香"],"cookingStyle":["炒","汆"],"season":["春","夏","秋","冬"],"suitability":[]}',
+  response: {
+    id: '021752299240546f98b00bcc2aeaa56419bd0b663a5fc4e3253de',
+    timestamp: 2025-07-12T05:47:21.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1370, completionTokens: 46, totalTokens: 1416 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 水煮鱼
+Tagging recipe: 油焖大虾
+[2025-07-12T05:47:21.779Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 混合烤鱼
+[2025-07-12T05:47:23.972Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 清蒸生蚝
+[2025-07-12T05:47:25.387Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 清蒸鲈鱼
+[2025-07-12T05:47:26.831Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 白灼虾
+[2025-07-12T05:47:28.890Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 糖醋鲤鱼
+[2025-07-12T05:47:30.485Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 红烧鱼
+[2025-07-12T05:47:32.525Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 10 recipes, adding delay...
+Tagging recipe: 红烧鱼头
+[2025-07-12T05:47:34.957Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 红烧鲤鱼
+[2025-07-12T05:47:37.243Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 芥末黄油罗氏虾
+[2025-07-12T05:47:39.187Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 葱油桂鱼
+[2025-07-12T05:47:40.623Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 葱烧海参
+[2025-07-12T05:47:42.260Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蒜蓉虾
+[2025-07-12T05:47:43.968Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蒜香黄油虾
+[2025-07-12T05:47:45.368Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蛏抱蛋
+[2025-07-12T05:47:47.226Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 香煎翘嘴鱼
+[2025-07-12T05:47:48.628Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 香煎翘嘴鱼: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["咸","鲜","香","甜","辣"],"cookingStyle":["煎","烧"],"season":["春","夏","秋","冬"],"suitability":[]}.
+  Error message: [
+    {
+      "received": "煎",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煎",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: []
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["咸","鲜","香","甜","辣"],"cookingStyle":["煎","烧"],"season":["春","夏","秋","冬"],"suitability":[]}',
+  response: {
+    id: '021752299268683f98b00bcc2aeaa56419bd0b663a5fc4e3a8a1f',
+    timestamp: 2025-07-12T05:47:50.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1322, completionTokens: 48, totalTokens: 1370 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 香煎翘嘴鱼
+Tagging recipe: 鲤鱼炖白菜
+[2025-07-12T05:47:50.147Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 鳊鱼炖豆腐
+[2025-07-12T05:47:51.441Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 20 recipes, adding delay...
+Tagging recipe: 黄油煎虾
+[2025-07-12T05:47:54.353Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 吐司果酱
+[2025-07-12T05:47:55.818Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 太阳蛋
+[2025-07-12T05:47:57.108Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 完美水煮蛋
+[2025-07-12T05:47:58.747Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 微波炉荷包蛋
+[2025-07-12T05:48:00.594Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 微波炉蛋糕
+[2025-07-12T05:48:02.330Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 手抓饼
+[2025-07-12T05:48:03.747Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 桂圆红枣粥
+[2025-07-12T05:48:05.197Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 水煮玉米
+[2025-07-12T05:48:06.783Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 水煮玉米: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["甜","咸"],"cookingStyle":["煮"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "煮",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煮",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["甜","咸"],"cookingStyle":["煮"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '021752299286838f98b00bcc2aeaa56419bd0b663a5fc4e6c0e82',
+    timestamp: 2025-07-12T05:48:09.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 946, completionTokens: 48, totalTokens: 994 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 水煮玉米
+Tagging recipe: 温泉蛋
+[2025-07-12T05:48:09.240Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 溏心蛋
+[2025-07-12T05:48:10.699Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 30 recipes, adding delay...
+Tagging recipe: 煎饺
+[2025-07-12T05:48:12.874Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 燕麦鸡蛋饼
+[2025-07-12T05:48:14.551Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 燕麦鸡蛋饼: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["香","鲜"],"cookingStyle":["煎"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "煎",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煎",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["香","鲜"],"cookingStyle":["煎"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '0217522992946068ab018e63d5e5028bd44265d28737c0a66ed93',
+    timestamp: 2025-07-12T05:48:15.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 998, completionTokens: 48, totalTokens: 1046 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 燕麦鸡蛋饼
+Tagging recipe: 牛奶燕麦
+[2025-07-12T05:48:16.054Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 空气炸锅面包片
+[2025-07-12T05:48:17.485Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 美式炒蛋
+[2025-07-12T05:48:19.023Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 苏格兰蛋
+[2025-07-12T05:48:20.455Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 茶叶蛋
+[2025-07-12T05:48:21.786Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 茶叶蛋: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["咸","鲜","香","甜"],"cookingStyle":["煮","焖"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "煮",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煮",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["咸","鲜","香","甜"],"cookingStyle":["煮","焖"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '021752299301840f98b00bcc2aeaa56419bd0b663a5fc4e961c92',
+    timestamp: 2025-07-12T05:48:23.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1057, completionTokens: 54, totalTokens: 1111 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 茶叶蛋
+Tagging recipe: 蒸水蛋
+[2025-07-12T05:48:23.353Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蒸花卷
+[2025-07-12T05:48:24.771Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蛋煎糍粑
+[2025-07-12T05:48:26.399Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 蛋煎糍粑: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["甜","咸","香"],"cookingStyle":["煎"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "煎",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煎",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["甜","咸","香"],"cookingStyle":["煎"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '0217522993064538ab018e63d5e5028bd44265d28737c0a998d6d',
+    timestamp: 2025-07-12T05:48:28.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 973, completionTokens: 50, totalTokens: 1023 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 蛋煎糍粑
+Tagging recipe: 金枪鱼酱三明治
+[2025-07-12T05:48:28.133Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 鸡蛋三明治
+[2025-07-12T05:48:29.880Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 鸡蛋三明治: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["咸","鲜","香"],"cookingStyle":["煎"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly"]}.
+  Error message: [
+    {
+      "received": "煎",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煎",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["咸","鲜","香"],"cookingStyle":["煎"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly"]}',
+  response: {
+    id: '0217522993099358ab018e63d5e5028bd44265d28737c0a529937',
+    timestamp: 2025-07-12T05:48:31.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 941, completionTokens: 45, totalTokens: 986 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 鸡蛋三明治
+Tagging recipe: 油泼辣子
+[2025-07-12T05:48:31.604Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 油酥
+[2025-07-12T05:48:33.190Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 40 recipes, adding delay...
+Tagging recipe: 炸串酱料
+[2025-07-12T05:48:35.794Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 简易版炒糖色
+[2025-07-12T05:48:37.394Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 糖醋汁
+[2025-07-12T05:48:38.909Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 草莓酱
+[2025-07-12T05:48:40.392Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 葱油
+[2025-07-12T05:48:42.035Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蒜香酱油
+[2025-07-12T05:48:43.535Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蔗糖糖浆
+[2025-07-12T05:48:45.234Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 反沙芋头
+[2025-07-12T05:48:47.182Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 咖啡椰奶冻
+[2025-07-12T05:48:48.588Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 奥利奥冰淇淋
+[2025-07-12T05:48:49.977Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 50 recipes, adding delay...
+Tagging recipe: 戚风蛋糕
+[2025-07-12T05:48:52.476Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 提拉米苏
+[2025-07-12T05:48:54.146Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 无厨师机蜂蜜面包
+[2025-07-12T05:48:55.313Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 炸鲜奶
+[2025-07-12T05:48:56.905Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 烤箱版巴斯克芝士蛋糕
+[2025-07-12T05:48:58.746Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 烤蛋挞
+[2025-07-12T05:49:00.232Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 玛格丽特饼干
+[2025-07-12T05:49:03.193Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 红柚蛋糕
+[2025-07-12T05:49:04.418Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 芋泥雪媚娘
+[2025-07-12T05:49:05.907Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 英式司康
+[2025-07-12T05:49:07.572Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 60 recipes, adding delay...
+Tagging recipe: 草莓冰淇淋
+[2025-07-12T05:49:10.257Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 酸奶意式奶冻
+[2025-07-12T05:49:12.270Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 雪花酥
+[2025-07-12T05:49:13.691Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 魔芋蛋糕
+[2025-07-12T05:49:14.981Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 龟苓膏
+[2025-07-12T05:49:16.405Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: B52轰炸机
+[2025-07-12T05:49:18.449Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: Mojito莫吉托
+[2025-07-12T05:49:19.717Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 冬瓜茶
+[2025-07-12T05:49:20.935Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 冰粉
+[2025-07-12T05:49:22.377Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 可乐桶
+[2025-07-12T05:49:24.212Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 70 recipes, adding delay...
+Tagging recipe: 奇异果菠菜特调
+[2025-07-12T05:49:26.782Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 奶茶
+[2025-07-12T05:49:28.801Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 杨枝甘露
+[2025-07-12T05:49:29.903Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 柠檬水
+[2025-07-12T05:49:31.109Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 泰国手标红茶
+[2025-07-12T05:49:32.233Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 海边落日
+[2025-07-12T05:49:33.468Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 百香果橙子特调
+[2025-07-12T05:49:34.993Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 砂糖椰子冰沙
+[2025-07-12T05:49:36.119Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 耙耙柑茶
+[2025-07-12T05:49:38.164Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 菠萝咖啡特调
+[2025-07-12T05:49:40.003Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 80 recipes, adding delay...
+Tagging recipe: 酒酿醪糟
+[2025-07-12T05:49:42.180Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 酸梅汤
+[2025-07-12T05:49:43.792Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 酸梅汤（半成品加工）
+[2025-07-12T05:49:45.426Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 金汤力
+[2025-07-12T05:49:47.138Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 金菲士
+[2025-07-12T05:49:48.416Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 长岛冰茶
+[2025-07-12T05:49:49.690Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 乡村啤酒鸭
+[2025-07-12T05:49:50.848Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 农家一碗香
+[2025-07-12T05:49:52.870Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 冬瓜酿肉
+[2025-07-12T05:49:54.679Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 冷吃兔
+[2025-07-12T05:49:55.966Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 90 recipes, adding delay...
+Tagging recipe: 凉拌鸡丝
+[2025-07-12T05:49:58.501Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 卤菜
+[2025-07-12T05:50:00.022Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 口水鸡
+[2025-07-12T05:50:01.457Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 可乐鸡翅
+[2025-07-12T05:50:02.853Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 台式卤肉饭
+[2025-07-12T05:50:04.693Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 咕噜肉
+[2025-07-12T05:50:05.567Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 咖喱肥牛
+[2025-07-12T05:50:06.922Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 商芝肉
+[2025-07-12T05:50:09.002Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 啤酒鸭
+[2025-07-12T05:50:10.771Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 回锅肉
+[2025-07-12T05:50:12.456Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 100 recipes, adding delay...
+Tagging recipe: 土豆炖排骨
+[2025-07-12T05:50:14.888Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 奶酪培根通心粉
+[2025-07-12T05:50:16.812Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 姜炒鸡
+[2025-07-12T05:50:18.898Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 姜葱捞鸡
+[2025-07-12T05:50:20.343Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 孜然牛肉
+[2025-07-12T05:50:22.285Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 宫保鸡丁
+[2025-07-12T05:50:23.788Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 小炒肉
+[2025-07-12T05:50:25.097Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 小炒鸡肝
+[2025-07-12T05:50:26.407Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 小炒黄牛肉
+[2025-07-12T05:50:27.754Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 小米辣炒肉
+[2025-07-12T05:50:29.035Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 110 recipes, adding delay...
+Tagging recipe: 小酥肉
+[2025-07-12T05:50:31.676Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 尖叫牛蛙
+[2025-07-12T05:50:33.181Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 尖椒炒牛肉
+[2025-07-12T05:50:34.974Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 山西过油肉
+[2025-07-12T05:50:37.238Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 巴基斯坦牛肉咖喱
+[2025-07-12T05:50:39.992Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 带把肘子
+[2025-07-12T05:50:41.839Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 干煸仔鸡
+[2025-07-12T05:50:43.209Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 广式萝卜牛腩
+[2025-07-12T05:50:45.357Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 徽派红烧肉
+[2025-07-12T05:50:46.744Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 意式烤鸡
+[2025-07-12T05:50:48.891Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 120 recipes, adding delay...
+Tagging recipe: 新疆大盘鸡
+[2025-07-12T05:50:51.200Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 无骨鸡爪
+[2025-07-12T05:50:52.509Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 杀猪菜
+[2025-07-12T05:50:53.910Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 枝竹羊腩煲
+[2025-07-12T05:50:55.655Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 柱候牛腩
+[2025-07-12T05:50:57.385Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 梅菜扣肉
+[2025-07-12T05:50:59.144Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 椒盐排条
+[2025-07-12T05:51:00.984Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 水煮牛肉
+[2025-07-12T05:51:02.417Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 水煮牛肉: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["辣","咸","鲜","香"],"cookingStyle":["煮"],"season":["冬"],"suitability":[]}.
+  Error message: [
+    {
+      "received": "煮",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煮",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: []
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["辣","咸","鲜","香"],"cookingStyle":["煮"],"season":["冬"],"suitability":[]}',
+  response: {
+    id: '0217522994625088ab018e63d5e5028bd44265d28737c0ae0ddef',
+    timestamp: 2025-07-12T05:51:03.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1307, completionTokens: 38, totalTokens: 1345 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 水煮牛肉
+Tagging recipe: 水煮肉片
+[2025-07-12T05:51:03.672Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 洋葱炒猪肉
+[2025-07-12T05:51:05.439Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 清蒸鳜鱼
+[2025-07-12T05:51:07.384Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 130 recipes, adding delay...
+Tagging recipe: 湖南家常红烧肉
+[2025-07-12T05:51:09.771Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 湘祁米夫鸭
+[2025-07-12T05:51:11.254Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 烤鸡翅
+[2025-07-12T05:51:12.681Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 牛排
+[2025-07-12T05:51:14.334Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 牛排: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["咸","鲜","香"],"cookingStyle":["煎"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "煎",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煎",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["咸","鲜","香"],"cookingStyle":["煎"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '0217522994744258ab018e63d5e5028bd44265d28737c0a996ce2',
+    timestamp: 2025-07-12T05:51:15.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1168, completionTokens: 50, totalTokens: 1218 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 牛排
+Tagging recipe: 猪皮冻
+[2025-07-12T05:51:15.882Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 猪肉烩酸菜
+[2025-07-12T05:51:17.265Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 甜辣烤全翅
+[2025-07-12T05:51:18.874Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 番茄红酱
+[2025-07-12T05:51:21.054Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 瘦肉土豆片
+[2025-07-12T05:51:22.795Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 白菜猪肉炖粉条
+[2025-07-12T05:51:24.124Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 粉蒸肉
+[2025-07-12T05:51:25.726Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 140 recipes, adding delay...
+Tagging recipe: 糖醋排骨
+[2025-07-12T05:51:28.814Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 糖醋里脊
+[2025-07-12T05:51:30.547Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 红烧猪蹄
+[2025-07-12T05:51:33.268Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 红烧肉
+[2025-07-12T05:51:34.626Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 羊排焖面
+[2025-07-12T05:51:36.210Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 老妈蹄花
+[2025-07-12T05:51:37.952Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 老式锅包肉
+[2025-07-12T05:51:39.316Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 肉饼炖蛋
+[2025-07-12T05:51:41.188Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 芥末罗氏虾
+[2025-07-12T05:51:42.719Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 茭白炒肉
+[2025-07-12T05:51:44.479Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 150 recipes, adding delay...
+Tagging recipe: 荔枝肉
+[2025-07-12T05:51:47.041Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 荷兰豆炒腊肠
+[2025-07-12T05:51:48.319Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 萝卜炖羊排
+[2025-07-12T05:51:50.034Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蒜苔炒肉末
+[2025-07-12T05:51:52.081Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 虎皮肘子
+[2025-07-12T05:51:53.550Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蚂蚁上树
+[2025-07-12T05:51:55.433Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 血浆鸭
+[2025-07-12T05:51:58.263Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 西红柿土豆炖牛肉
+[2025-07-12T05:51:59.850Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 西红柿牛腩
+[2025-07-12T05:52:01.707Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 豆豉鲮鱼油麦菜
+[2025-07-12T05:52:03.409Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 160 recipes, adding delay...
+Tagging recipe: 豉汁蒸白鱔
+[2025-07-12T05:52:05.842Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 贵州辣子鸡
+[2025-07-12T05:52:07.340Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 辣椒炒肉
+[2025-07-12T05:52:09.012Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 酱排骨
+[2025-07-12T05:52:10.400Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 酱牛肉
+[2025-07-12T05:52:12.268Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 醉排骨
+[2025-07-12T05:52:13.692Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 青椒土豆炒肉
+[2025-07-12T05:52:15.110Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 香干肉丝
+[2025-07-12T05:52:16.494Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 香干芹菜炒肉
+[2025-07-12T05:52:17.867Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 香煎五花肉
+[2025-07-12T05:52:19.936Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 香煎五花肉: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["咸","鲜","香"],"cookingStyle":["煎"],"season":["春","夏","秋","冬"],"suitability":[]}.
+  Error message: [
+    {
+      "received": "煎",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煎",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: []
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["咸","鲜","香"],"cookingStyle":["煎"],"season":["春","夏","秋","冬"],"suitability":[]}',
+  response: {
+    id: '02175229954002651d727099ef9e6551e5ccc9668f5c9ca68e8b1',
+    timestamp: 2025-07-12T05:52:21.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1031, completionTokens: 42, totalTokens: 1073 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 香煎五花肉
+Tagging recipe: 香菇滑鸡
+[2025-07-12T05:52:21.636Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 170 recipes, adding delay...
+Tagging recipe: 香辣鸡爪煲
+[2025-07-12T05:52:23.954Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 鱼香肉丝
+[2025-07-12T05:52:25.380Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 鱼香茄子
+[2025-07-12T05:52:27.104Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 麻婆豆腐
+[2025-07-12T05:52:28.742Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 麻辣香锅
+[2025-07-12T05:52:30.216Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 黄焖鸡
+[2025-07-12T05:52:31.964Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 黄焖鸡: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["咸","鲜","香","微辣"],"cookingStyle":["焖"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "微辣",
+      "code": "invalid_enum_value",
+      "options": [
+        "酸",
+        "甜",
+        "苦",
+        "辣",
+        "咸",
+        "鲜",
+        "麻",
+        "香"
+      ],
+      "path": [
+        "taste",
+        3
+      ],
+      "message": "Invalid enum value. Expected '酸' | '甜' | '苦' | '辣' | '咸' | '鲜' | '麻' | '香', received '微辣'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "微辣",
+        "code": "invalid_enum_value",
+        "options": [
+          "酸",
+          "甜",
+          "苦",
+          "辣",
+          "咸",
+          "鲜",
+          "麻",
+          "香"
+        ],
+        "path": [
+          "taste",
+          3
+        ],
+        "message": "Invalid enum value. Expected '酸' | '甜' | '苦' | '辣' | '咸' | '鲜' | '麻' | '香', received '微辣'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["咸","鲜","香","微辣"],"cookingStyle":["焖"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '02175229955205451d727099ef9e6551e5ccc9668f5c9ca875dde',
+    timestamp: 2025-07-12T05:52:33.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 957, completionTokens: 53, totalTokens: 1010 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 黄焖鸡
+Tagging recipe: 黄瓜炒肉
+[2025-07-12T05:52:33.879Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 黑椒牛柳
+[2025-07-12T05:52:35.813Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 黔式腊肠娃娃菜
+[2025-07-12T05:52:37.436Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 凉皮
+[2025-07-12T05:52:39.185Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 半成品意面
+[2025-07-12T05:52:40.824Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 180 recipes, adding delay...
+Tagging recipe: 懒人蛋挞
+[2025-07-12T05:52:42.918Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 炸薯条
+[2025-07-12T05:52:44.495Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 牛油火锅底料
+[2025-07-12T05:52:45.610Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 空气炸锅羊排
+[2025-07-12T05:52:46.866Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 空气炸锅鸡翅中
+[2025-07-12T05:52:48.687Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 速冻水饺
+[2025-07-12T05:52:50.450Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 速冻水饺: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":[],"cookingStyle":["煮"],"season":["春","夏","秋","冬"],"suitability":[]}.
+  Error message: [
+    {
+      "received": "煮",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煮",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: []
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":[],"cookingStyle":["煮"],"season":["春","夏","秋","冬"],"suitability":[]}',
+  response: {
+    id: '02175229957054051d727099ef9e6551e5ccc9668f5c9ca35b3d3',
+    timestamp: 2025-07-12T05:52:52.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1118, completionTokens: 37, totalTokens: 1155 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 速冻水饺
+Tagging recipe: 速冻汤圆
+[2025-07-12T05:52:52.106Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 速冻馄饨
+[2025-07-12T05:52:53.456Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 勾芡香菇汤
+[2025-07-12T05:52:55.363Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 奶油蘑菇汤
+[2025-07-12T05:52:57.221Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 小米粥
+[2025-07-12T05:52:58.655Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 190 recipes, adding delay...
+Tagging recipe: 排骨苦瓜汤
+[2025-07-12T05:53:01.283Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 昂刺鱼豆腐汤
+[2025-07-12T05:53:02.970Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 朱雀汤
+[2025-07-12T05:53:05.196Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 玉米排骨汤
+[2025-07-12T05:53:06.648Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 生汆丸子汤
+[2025-07-12T05:53:07.962Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 番茄牛肉蛋花汤
+[2025-07-12T05:53:09.394Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 皮蛋瘦肉粥
+[2025-07-12T05:53:10.855Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 米粥
+[2025-07-12T05:53:12.161Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 紫菜蛋花汤
+[2025-07-12T05:53:13.809Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 罗宋汤
+[2025-07-12T05:53:15.412Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 200 recipes, adding delay...
+Tagging recipe: 羊肉汤
+[2025-07-12T05:53:17.975Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 腊八粥
+[2025-07-12T05:53:20.044Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 菌菇炖乳鸽
+[2025-07-12T05:53:21.385Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 西红柿鸡蛋汤
+[2025-07-12T05:53:23.373Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 金针菇汤
+[2025-07-12T05:53:24.706Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 银耳莲子粥
+[2025-07-12T05:53:26.188Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 陈皮排骨汤
+[2025-07-12T05:53:27.803Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 陈皮排骨汤
+[2025-07-12T05:53:29.260Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 中式馅饼
+[2025-07-12T05:53:31.173Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 凉粉
+[2025-07-12T05:53:32.758Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 210 recipes, adding delay...
+Tagging recipe: 基础牛奶面包
+[2025-07-12T05:53:35.588Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 微波炉腊肠煲仔饭
+[2025-07-12T05:53:36.940Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 意式肉酱面
+[2025-07-12T05:53:38.662Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 手工水饺
+[2025-07-12T05:53:40.217Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 扬州炒饭
+[2025-07-12T05:53:41.816Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 披萨饼皮
+[2025-07-12T05:53:43.761Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 日式咖喱饭
+[2025-07-12T05:53:46.054Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 日式肥牛丼饭
+[2025-07-12T05:53:47.529Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 汤面
+[2025-07-12T05:53:48.813Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 河南蒸面条
+[2025-07-12T05:53:50.242Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 220 recipes, adding delay...
+Tagging recipe: 火腿饭团
+[2025-07-12T05:53:53.271Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 炒凉粉
+[2025-07-12T05:53:54.557Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 炒年糕
+[2025-07-12T05:53:56.293Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 炒意大利面
+[2025-07-12T05:53:58.137Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 炒方便面
+[2025-07-12T05:53:59.531Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 炒河粉
+[2025-07-12T05:54:00.985Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 炒馍
+[2025-07-12T05:54:02.892Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 炸酱面
+[2025-07-12T05:54:04.105Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 烙饼
+[2025-07-12T05:54:06.022Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 烧饼
+[2025-07-12T05:54:07.372Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 烧饼: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["咸","香"],"cookingStyle":["烙"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "烙",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '烙'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "烙",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '烙'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["咸","香"],"cookingStyle":["烙"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '0217522996474622ddf549ac029109269b88db0416003a22fc5ce',
+    timestamp: 2025-07-12T05:54:09.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1013, completionTokens: 48, totalTokens: 1061 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 烧饼
+Tagging recipe: 热干面
+[2025-07-12T05:54:09.199Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 230 recipes, adding delay...
+Tagging recipe: 煮泡面加蛋
+[2025-07-12T05:54:12.040Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 煮泡面加蛋: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["咸","鲜","香"],"cookingStyle":["煮"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly"]}.
+  Error message: [
+    {
+      "received": "煮",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煮",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["咸","鲜","香"],"cookingStyle":["煮"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly"]}',
+  response: {
+    id: '021752299652130f98b00bcc2aeaa56419bd0b663a5fc4ecc6d98',
+    timestamp: 2025-07-12T05:54:13.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 971, completionTokens: 45, totalTokens: 1016 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 煮泡面加蛋
+Tagging recipe: 电饭煲三文鱼炊饭
+[2025-07-12T05:54:13.415Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 空气炸锅照烧鸡饭
+[2025-07-12T05:54:14.859Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 米饭
+[2025-07-12T05:54:16.360Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 老友猪肉粉
+[2025-07-12T05:54:17.665Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 老干妈拌面
+[2025-07-12T05:54:19.572Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 肉蛋盖饭
+[2025-07-12T05:54:20.883Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 肉蛋盖饭: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["咸","鲜","甜","酸","香"],"cookingStyle":["煎","焖"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "煎",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煎",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["咸","鲜","甜","酸","香"],"cookingStyle":["煎","焖"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '021752299660973f98b00bcc2aeaa56419bd0b663a5fc4efe6595',
+    timestamp: 2025-07-12T05:54:23.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1063, completionTokens: 56, totalTokens: 1119 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 肉蛋盖饭
+Tagging recipe: 茄子肉煎饼
+[2025-07-12T05:54:22.999Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 茄子肉煎饼: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["咸","香"],"cookingStyle":["煎"],"season":[],"suitability":[]}.
+  Error message: [
+    {
+      "received": "煎",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煎",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [],
+      suitability: []
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["咸","香"],"cookingStyle":["煎"],"season":[],"suitability":[]}',
+  response: {
+    id: '021752299663098f649aed539d2ccf703999946aea520b5171173',
+    timestamp: 2025-07-12T05:54:24.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1214, completionTokens: 33, totalTokens: 1247 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 茄子肉煎饼
+Tagging recipe: 葱油拌面
+[2025-07-12T05:54:24.352Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蒸卤面
+[2025-07-12T05:54:25.975Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蛋包饭
+[2025-07-12T05:54:27.321Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蛋炒饭
+[2025-07-12T05:54:29.009Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 螺蛳粉
+[2025-07-12T05:54:30.486Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 螺蛳粉: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["酸","辣","咸","鲜","香"],"cookingStyle":["煮"],"season":["春","夏","秋","冬"],"suitability":[]}.
+  Error message: [
+    {
+      "received": "煮",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煮",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: []
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["酸","辣","咸","鲜","香"],"cookingStyle":["煮"],"season":["春","夏","秋","冬"],"suitability":[]}',
+  response: {
+    id: '021752299670577f98b00bcc2aeaa56419bd0b663a5fc4eb47140',
+    timestamp: 2025-07-12T05:54:31.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 961, completionTokens: 46, totalTokens: 1007 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 螺蛳粉
+Tagging recipe: 西红柿鸡蛋挂面
+[2025-07-12T05:54:31.785Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 240 recipes, adding delay...
+Tagging recipe: 豆角焖面
+[2025-07-12T05:54:34.775Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 酱拌荞麦面
+[2025-07-12T05:54:36.105Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 酸辣蕨根粉
+[2025-07-12T05:54:37.622Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 醪糟小汤圆
+[2025-07-12T05:54:39.404Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 醪糟小汤圆: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["甜","香"],"cookingStyle":["煮"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "煮",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煮",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["甜","香"],"cookingStyle":["煮"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '021752299679503f649aed539d2ccf703999946aea520b51eed3d',
+    timestamp: 2025-07-12T05:54:40.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 941, completionTokens: 48, totalTokens: 989 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 醪糟小汤圆
+Tagging recipe: 陕西油泼面
+[2025-07-12T05:54:40.840Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 韩式拌饭
+[2025-07-12T05:54:42.067Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 韩式拌饭: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["甜","辣","咸","香"],"cookingStyle":["炒","煎","蒸"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "煎",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        1
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煎",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          1
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["甜","辣","咸","香"],"cookingStyle":["炒","煎","蒸"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '021752299682167f649aed539d2ccf703999946aea520b5341555',
+    timestamp: 2025-07-12T05:54:44.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1142, completionTokens: 56, totalTokens: 1198 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 韩式拌饭
+Tagging recipe: 韭菜盒子
+[2025-07-12T05:54:44.837Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 鲣鱼海苔玉米饭
+[2025-07-12T05:54:46.369Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 麻油拌面
+[2025-07-12T05:54:48.006Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 麻辣减脂荞麦面
+[2025-07-12T05:54:49.676Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 麻辣减脂荞麦面: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["辣","麻","咸","香"],"cookingStyle":["煮"],"season":["春","夏","秋","冬"],"suitability":[]}.
+  Error message: [
+    {
+      "received": "煮",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煮",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: []
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["辣","麻","咸","香"],"cookingStyle":["煮"],"season":["春","夏","秋","冬"],"suitability":[]}',
+  response: {
+    id: '021752299689775f649aed539d2ccf703999946aea520b59b977d',
+    timestamp: 2025-07-12T05:54:51.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1188, completionTokens: 44, totalTokens: 1232 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 麻辣减脂荞麦面
+Tagging recipe: 示例菜
+[2025-07-12T05:54:51.142Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 上汤娃娃菜
+[2025-07-12T05:54:53.101Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 上汤娃娃菜: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["咸","鲜","香"],"cookingStyle":["煮"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "煮",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煮",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["咸","鲜","香"],"cookingStyle":["煮"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '021752299693200f649aed539d2ccf703999946aea520b559e9c2',
+    timestamp: 2025-07-12T05:54:55.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1135, completionTokens: 50, totalTokens: 1185 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 上汤娃娃菜
+Tagging recipe: 凉拌木耳
+[2025-07-12T05:54:55.008Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 凉拌油麦菜
+[2025-07-12T05:54:56.588Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 250 recipes, adding delay...
+Tagging recipe: 凉拌莴笋
+[2025-07-12T05:54:59.421Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 凉拌豆腐
+[2025-07-12T05:55:01.113Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 凉拌金针菇
+[2025-07-12T05:55:03.131Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 凉拌黄瓜
+[2025-07-12T05:55:05.055Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 包菜炒鸡蛋粉丝
+[2025-07-12T05:55:06.528Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 地三鲜
+[2025-07-12T05:55:08.649Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 小炒藕丁
+[2025-07-12T05:55:10.651Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 干锅花菜
+[2025-07-12T05:55:11.748Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 手撕包菜
+[2025-07-12T05:55:13.430Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 拔丝土豆
+[2025-07-12T05:55:14.781Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 260 recipes, adding delay...
+Tagging recipe: 松仁玉米
+[2025-07-12T05:55:17.156Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 椒盐玉米
+[2025-07-12T05:55:18.932Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 榄菜肉末四季豆
+[2025-07-12T05:55:20.717Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 水油焖蔬菜
+[2025-07-12T05:55:22.413Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 油醋爆蛋
+[2025-07-12T05:55:23.775Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 洋葱炒鸡蛋
+[2025-07-12T05:55:25.344Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 清炒花菜
+[2025-07-12T05:55:26.984Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 清蒸南瓜
+[2025-07-12T05:55:28.701Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 炒滑蛋
+[2025-07-12T05:55:29.829Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 炒茄子
+[2025-07-12T05:55:31.777Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 270 recipes, adding delay...
+Tagging recipe: 炒青菜
+[2025-07-12T05:55:34.533Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 烤茄子
+[2025-07-12T05:55:35.936Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 白灼菜心
+[2025-07-12T05:55:37.937Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 糖拌西红柿
+[2025-07-12T05:55:39.432Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 素炒豆角
+[2025-07-12T05:55:40.828Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 红烧冬瓜
+[2025-07-12T05:55:42.483Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 红烧茄子
+[2025-07-12T05:55:44.516Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 脆皮豆腐
+[2025-07-12T05:55:46.664Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 芹菜拌茶树菇
+[2025-07-12T05:55:48.302Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 茄子炖土豆
+[2025-07-12T05:55:50.012Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 280 recipes, adding delay...
+Tagging recipe: 莴笋叶煎饼
+[2025-07-12T05:55:52.671Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 菠菜炒鸡蛋
+[2025-07-12T05:55:54.138Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 葱煎豆腐
+[2025-07-12T05:55:55.877Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 葱煎豆腐: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["咸","鲜","香","辣"],"cookingStyle":["煎","炒"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "煎",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煎",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["咸","鲜","香","辣"],"cookingStyle":["煎","炒"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '021752299755967f98b00bcc2aeaa56419bd0b663a5fc4e4a3d9d',
+    timestamp: 2025-07-12T05:55:57.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1109, completionTokens: 54, totalTokens: 1163 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 葱煎豆腐
+Tagging recipe: 蒜蓉空心菜
+[2025-07-12T05:55:57.732Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蒜蓉西兰花
+[2025-07-12T05:55:59.443Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蒲烧茄子
+[2025-07-12T05:56:01.225Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 蒲烧茄子: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["甜","咸","鲜","香"],"cookingStyle":["蒸","煎","烧"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "煎",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        1
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煎",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          1
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煎'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["甜","咸","鲜","香"],"cookingStyle":["蒸","煎","烧"],"season":["春","夏","秋","冬"],"suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '021752299761324f649aed539d2ccf703999946aea520b5ec249e',
+    timestamp: 2025-07-12T05:56:03.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 1095, completionTokens: 56, totalTokens: 1151 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 蒲烧茄子
+Tagging recipe: 虎皮青椒
+[2025-07-12T05:56:03.102Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蚝油三鲜菇
+[2025-07-12T05:56:04.986Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 蚝油生菜
+[2025-07-12T05:56:06.655Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 西红柿炒鸡蛋
+[2025-07-12T05:56:09.005Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 西红柿豆腐汤羹
+[2025-07-12T05:56:10.485Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 西葫芦炒鸡蛋
+[2025-07-12T05:56:12.034Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Processed 290 recipes, adding delay...
+Tagging recipe: 话梅煮毛豆
+[2025-07-12T05:56:14.660Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Error tagging recipe 话梅煮毛豆: NoObjectGeneratedError [AI_NoObjectGeneratedError]: No object generated: response did not match schema.
+    at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:775:17)
+    at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+    ... 4 lines matching cause stack trace ...
+    at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+  cause: _TypeValidationError [AI_TypeValidationError]: Type validation failed: Value: {"taste":["酸","甜","咸"],"cookingStyle":["煮"],"season":["夏"],"suitability":["kid_friendly","pregnancy_safe"]}.
+  Error message: [
+    {
+      "received": "煮",
+      "code": "invalid_enum_value",
+      "options": [
+        "炒",
+        "蒸",
+        "炖",
+        "炸",
+        "凉拌",
+        "烤",
+        "烧",
+        "焖"
+      ],
+      "path": [
+        "cookingStyle",
+        0
+      ],
+      "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+    }
+  ]
+      at Function.wrap (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider/src/errors/type-validation-error.ts:49:9)
+      at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:63:34)
+      at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+      ... 5 lines matching cause stack trace ...
+      at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24)
+      at async main (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/process-data.ts:28:30) {
+    cause: ZodError: [
+      {
+        "received": "煮",
+        "code": "invalid_enum_value",
+        "options": [
+          "炒",
+          "蒸",
+          "炖",
+          "炸",
+          "凉拌",
+          "烤",
+          "烧",
+          "焖"
+        ],
+        "path": [
+          "cookingStyle",
+          0
+        ],
+        "message": "Invalid enum value. Expected '炒' | '蒸' | '炖' | '炸' | '凉拌' | '烤' | '烧' | '焖', received '煮'"
+      }
+    ]
+        at Object.get error [as error] (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/zod/v3/types.cjs:45:31)
+        at Object.validate (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/ui-utils/src/zod-schema.ts:31:45)
+        at safeValidateTypes (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/@ai-sdk/provider-utils/src/validate-types.ts:55:30)
+        at Object.validateFinalResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/output-strategy.ts:113:12)
+        at processResult (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:765:49)
+        at fn (/Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/generate-object/generate-object.ts:790:18)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async /Users/zwdroid/Documents/workspace/project/CookBookAgent/node_modules/ai/core/telemetry/record-span.ts:18:22
+        at async LLMBasedTagger.tagRecipe (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:32:22)
+        at async LLMBasedTagger.tagRecipesIncremental (/Users/zwdroid/Documents/workspace/project/CookBookAgent/scripts/data-processing/LLMBasedTagger.ts:71:24) {
+      issues: [Array],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [Array]
+    },
+    value: {
+      taste: [Array],
+      cookingStyle: [Array],
+      season: [Array],
+      suitability: [Array]
+    },
+    [Symbol(vercel.ai.error)]: true,
+    [Symbol(vercel.ai.error.AI_TypeValidationError)]: true
+  },
+  text: '{"taste":["酸","甜","咸"],"cookingStyle":["煮"],"season":["夏"],"suitability":["kid_friendly","pregnancy_safe"]}',
+  response: {
+    id: '021752299774751f98b00bcc2aeaa56419bd0b663a5fc4ed15c25',
+    timestamp: 2025-07-12T05:56:16.000Z,
+    modelId: 'doubao-seed-1-6-250615'
+  },
+  usage: { promptTokens: 886, completionTokens: 44, totalTokens: 930 },
+  finishReason: 'tool-calls',
+  [Symbol(vercel.ai.error)]: true,
+  [Symbol(vercel.ai.error.AI_NoObjectGeneratedError)]: true
+}
+Failed to tag recipe: 话梅煮毛豆
+Tagging recipe: 酸辣土豆丝
+[2025-07-12T05:56:15.970Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 金针菇日本豆腐煲
+[2025-07-12T05:56:17.809Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 陕北熬豆角
+[2025-07-12T05:56:19.042Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 雷椒皮蛋
+[2025-07-12T05:56:20.780Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 鸡蛋火腿炒黄瓜
+[2025-07-12T05:56:22.711Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Tagging recipe: 鸡蛋羹
+[2025-07-12T05:56:24.308Z] Model Usage: Recipe Tagging - doubao-seed-1-6-250615
+Total API calls made: 296
+Processed 296 recipes total
+
+💾 Step 3: Building databases...
+Building databases for 296 recipes...
+Successfully wrote databases:
+- data/recipes_index.json (296 recipes)
+- data/recipes_data.json (295 recipes)
+Generated statistics: data/statistics.json
+Categories: aquatic, breakfast, condiment, dessert, drink, meat_dish, semi-finished, soup, staple, template, vegetable_dish
+Difficulty range: 1 - 4
+Databases built successfully!
+
+✅ Data processing pipeline completed successfully!
+You can now run the CookingAgent with: npm run dev

@@ -7,6 +7,18 @@
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white)
 ![AI](https://img.shields.io/badge/AI_Powered-FF6B6B?style=flat&logo=openai&logoColor=white)
 
+## 上下文工程
+
+docs 下为 AI 开发的基础文档，context_engineering 下为 AI 交互的实时文档。
+
+docs 目录下：
+- prd.md：需求文档
+- sad.md：架构设计文档
+
+context_engineering 目录下：
+- **context_chat.txt**：生成代码、修复 bug 的全部交互
+- **context_generate-data.txt**：生成做菜数据源、打标签的交互
+
 ## ✨ 核心功能
 
 ### 🎯 **智能菜单推荐**
